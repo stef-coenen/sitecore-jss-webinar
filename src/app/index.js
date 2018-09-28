@@ -2,7 +2,9 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Placeholder } from "@sitecore-jss/sitecore-jss-react";
 
-import "../../assets/css/default.css";
+// import "bootstrap/dist/css/bootstrap.min.css";
+// import "../../assets/css/default.css";
+import "../../assets/scss/jss-headless.scss";
 
 const App = ({ route }) => <Placeholder name="jss-uranus" rendering={route} />;
 

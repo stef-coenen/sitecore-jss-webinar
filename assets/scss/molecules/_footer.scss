@@ -1,0 +1,27 @@
+.footer {
+    background-color: $brand-dark-grey;
+    color: $brand-white;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+
+    &-container {
+        display: flex;
+        flex-direction: row;
+    }
+
+    &-image {
+    }
+
+    h1,
+    .h1,
+    h2,
+    .h2,
+    h3,
+    .h3,
+    h4,
+    .h4,
+    h5,
+    .h5 {
+        color: inherit;
+    }
+}

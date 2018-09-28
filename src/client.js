@@ -1,9 +1,9 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import { BrowserRouter } from 'react-router-dom';
-import Root from './boot/Root';
-import SitecoreContentService from './boot/SitecoreContentService';
-import SitecoreContextFactory from './boot/SitecoreContextFactory';
+import React from "react";
+import ReactDOM from "react-dom";
+import { BrowserRouter } from "react-router-dom";
+import Root from "./boot/Root";
+import SitecoreContentService from "./boot/SitecoreContentService";
+import SitecoreContextFactory from "./boot/SitecoreContextFactory";
 
 /* eslint-disable no-underscore-dangle */
 
@@ -14,10 +14,10 @@ import SitecoreContextFactory from './boot/SitecoreContextFactory';
 
 const render = (state, renderFunc) => {
   // remove when not testing; this is all the data we got to render with
-  console.log('state', state);
+  console.log("state", state);
 
   // HTML element to place the app into
-  const rootElement = document.getElementById('app');
+  const rootElement = document.getElementById("app");
 
   // render the app
   renderFunc(<Root initialState={state} Router={BrowserRouter} />, rootElement);
@@ -38,14 +38,19 @@ if (window.__data) {
 }
 
 // render with initial route data
-SitecoreContentService.getRouteData(window.location.pathname).then((routeData) => {
-  if (routeData && routeData.sitecore && routeData.sitecore.context) {
-    SitecoreContextFactory.setSitecoreContext({
-      route: routeData.sitecore.route,
-      itemId: routeData.sitecore.route.itemId,
-      ...routeData.sitecore.context,
-    });
-  }
+SitecoreContentService.getRouteData(window.location.pathname).then(
+  routeData => {
+    if (routeData && routeData.sitecore && routeData.sitecore.context) {
+      SitecoreContextFactory.setSitecoreContext({
+        route: routeData.sitecore.route,
+        itemId: routeData.sitecore.route.itemId,
+        ...routeData.sitecore.context
+      });
+    }
 
-  return render(routeData, window.__data ? ReactDOM.hydrate : ReactDOM.render);
-});
+    return render(
+      routeData,
+      window.__data ? ReactDOM.hydrate : ReactDOM.render
+    );
+  }
+);

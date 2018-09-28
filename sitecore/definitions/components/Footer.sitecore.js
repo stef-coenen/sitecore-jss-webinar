@@ -6,13 +6,10 @@ import {
 
 export default manifest => {
   addComponent(manifest, {
-    name: "Hero",
-    displayName: "Hero",
+    name: "Footer",
+    displayName: "Footer",
     // totally optional, but fun
     icon: SitecoreIcon.EmoticonSmile,
-    fields: [
-      { name: "title", type: CommonFieldTypes.SingleLineText },
-      { name: "backgroundImage", type: CommonFieldTypes.Image }
-    ]
+    fields: []
   });
 };

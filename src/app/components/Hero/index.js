@@ -1,10 +1,14 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Text, RichText, Image } from "@sitecore-jss/sitecore-jss-react";
+import { Container, Row, Col, Button } from "reactstrap";
 
 const Hero = ({ fields, copyright }) => (
-  <header>
-    <img src="//placehold.it/1600/FF0000" />
+  <header className="hero dark-bg">
+    <Image className="hero-image" media={fields.backgroundImage} />
+    <Container className="hero-container">
+      <Text tag="h1" className="hero-title" field={fields.title} />
+    </Container>
   </header>
 );
 
@@ -14,17 +18,13 @@ Hero.propTypes = {
       value: PropTypes.string,
       editable: PropTypes.string
     }),
-    logoImage: PropTypes.shape({
+    backgroundImage: PropTypes.shape({
       value: PropTypes.shape({
         src: PropTypes.string
       }),
       editable: PropTypes.string
     })
   })
-};
-
-Hero.defaultProps = {
-  copyright: "Copyright Sitecore A/S"
 };
 
 export default Hero;

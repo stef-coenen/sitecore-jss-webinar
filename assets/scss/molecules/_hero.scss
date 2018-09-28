@@ -1,0 +1,33 @@
+.hero {
+    position: relative;
+    margin-bottom: 2rem;
+    &-image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+    &-container {
+        position: relative;
+        min-height: 450px;
+        display: flex;
+    }
+    &-title {
+        margin: auto;
+        font-size: 4rem;
+    }
+}
+
+.dark-bg {
+    &.hero {
+        .hero {
+            &-title {
+                color: $brand-white;
+            }
+        }
+    }
+}
