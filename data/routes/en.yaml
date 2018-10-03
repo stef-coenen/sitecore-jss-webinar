@@ -5,6 +5,7 @@ name: home
 displayName: Home
 placeholders:
     jss-uranus:
+        - componentName: Navigation
         - componentName: Hero
           fields:
               title:
