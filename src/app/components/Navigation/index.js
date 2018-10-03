@@ -1,29 +1,70 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Text, RichText, Image } from "@sitecore-jss/sitecore-jss-react";
-import { Container, Navbar } from "reactstrap";
+import {
+  Container,
+  Navbar,
+  NavbarBrand,
+  NavbarToggler,
+  Collapse,
+  Nav,
+  NavItem,
+  NavLink,
+  UncontrolledDropdown,
+  DropdownToggle,
+  DropdownMenu,
+  DropdownItem
+} from "reactstrap";
 
-const Navigation = ({ fields }) => (
-  <Navbar>
-    <Container>
-      <h1>Navbar</h1>
-    </Container>
-  </Navbar>
-);
+export default class Navigation extends React.Component {
+  constructor(props) {
+    super(props);
 
-Navigation.propTypes = {
-  fields: PropTypes.shape({
-    title: PropTypes.shape({
-      value: PropTypes.string,
-      editable: PropTypes.string
-    }),
-    backgroundImage: PropTypes.shape({
-      value: PropTypes.shape({
-        src: PropTypes.string
-      }),
-      editable: PropTypes.string
-    })
-  })
-};
-
-export default Navigation;
+    this.toggleNavbar = this.toggleNavbar.bind(this);
+    this.state = {
+      collapsed: true
+    };
+  }
+  toggleNavbar() {
+    this.setState({
+      collapsed: !this.state.collapsed
+    });
+  }
+  render() {
+    return (
+      <section className="navigation">
+        <Container>
+          <Navbar color="faded" light expand="md">
+            <NavbarBrand href="/" className="mr-auto">
+              <img src="/assets/img/proxelo-logo-long.svg" />
+            </NavbarBrand>
+            <NavbarToggler onClick={this.toggleNavbar} className="mr-2" />
+            <Collapse isOpen={!this.state.collapsed} navbar>
+              <Nav navbar className="ml-auto">
+                <NavItem>
+                  <NavLink href="/components/">Components</NavLink>
+                </NavItem>
+                <NavItem>
+                  <NavLink href="https://github.com/reactstrap/reactstrap">
+                    GitHub
+                  </NavLink>
+                </NavItem>
+                <UncontrolledDropdown nav inNavbar>
+                  <DropdownToggle nav caret>
+                    Options
+                  </DropdownToggle>
+                  <DropdownMenu right>
+                    <DropdownItem>Option 1</DropdownItem>
+                    <DropdownItem>Option 2</DropdownItem>
+                    <DropdownItem divider />
+                    <DropdownItem>Reset</DropdownItem>
+                  </DropdownMenu>
+                </UncontrolledDropdown>
+              </Nav>
+            </Collapse>
+          </Navbar>
+        </Container>
+      </section>
+    );
+  }
+}

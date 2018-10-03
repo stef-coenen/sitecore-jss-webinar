@@ -9,11 +9,11 @@ const Footer = ({ fields, copyright }) => (
       <Row>
         <Col sm="2">
           <div className="footer-image">
-            <img src="//placehold.it/400x400/ffffff" />
+            <img src="/assets/img/proxelo-logo-white.svg" />
           </div>
         </Col>
 
-        <Col sm="5">
+        <Col sm="3" className="ml-auto">
           <Nav vertical>
             <NavItem>
               <NavLink href="/">Home</NavLink>
@@ -29,7 +29,20 @@ const Footer = ({ fields, copyright }) => (
             </NavItem>
           </Nav>
         </Col>
-        <Col sm="5">
+        <Col sm="3">
+          <Nav vertical>
+            <NavItem>
+              <NavLink href="/">About us</NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink href="/">Careers</NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink href="/">Legal</NavLink>
+            </NavItem>
+          </Nav>
+        </Col>
+        <Col sm="3">
           <Nav vertical>
             <NavItem>
               <NavLink href="/">About us</NavLink>

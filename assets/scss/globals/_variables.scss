@@ -67,18 +67,9 @@ $colors: (
     gray: $gray-600,
     gray-dark: $gray-800
 );
-$theme-colors: (
-    primary: $blue,
-    secondary: $white,
-    success: $green,
-    info: $cyan,
-    warning: $yellow,
-    danger: $red,
-    light: $gray-100,
-    dark: $gray-800
-);
 // Navbar
 $navbar-dark-color: rgba($white, 0.85);
 $navbar-dark-hover-color: rgba($white, 1);
+$navbar-height: 3.3rem;
 
 $spacer: 4rem;

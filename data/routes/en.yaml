@@ -14,4 +14,70 @@ placeholders:
                   value:
                       src: '/assets/img/hero-background.jpeg'
                       alt: Logo
+        - componentName: Section
+          params:
+              classList: 'mt-2 mb-2'
+          placeholders:
+              jss-section:
+                  - componentName: JssCard
+                    fields:
+                        title:
+                            value: Spring
+                        subtitle:
+                            value: Season
+                        text:
+                            value: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consequat nisl non erat rhoncus, a aliquet urna lobortis.
+                        backgroundImage:
+                            value:
+                                src: '/assets/img/card/spring.jpeg'
+                                alt: Logo
+                        link:
+                            value:
+                                href: 'http://www.sidewalk.be'
+                  - componentName: JssCard
+                    fields:
+                        title:
+                            value: Summer
+                        subtitle:
+                            value: Season
+                        text:
+                            value: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consequat nisl non erat rhoncus, a aliquet urna lobortis.
+                        backgroundImage:
+                            value:
+                                src: '/assets/img/card/summer.jpeg'
+                                alt: Logo
+                        link:
+                            value:
+                                href: 'http://www.sidewalk.be'
+                  - componentName: JssCard
+                    fields:
+                        title:
+                            value: Autumn
+                        subtitle:
+                            value: Season
+                        text:
+                            value: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consequat nisl non erat rhoncus, a aliquet urna lobortis.
+                        backgroundImage:
+                            value:
+                                src: '/assets/img/card/autumn.jpeg'
+                                alt: Logo
+                        link:
+                            value:
+                                href: 'http://www.sidewalk.be'
+                  - componentName: JssCard
+                    fields:
+                        title:
+                            value: Winter
+                        subtitle:
+                            value: Season
+                        text:
+                            value: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consequat nisl non erat rhoncus, a aliquet urna lobortis.
+                        backgroundImage:
+                            value:
+                                src: '/assets/img/card/winter.jpeg'
+                                alt: Logo
+                        link:
+                            value:
+                                href: 'http://www.sidewalk.be'
+
         - componentName: Footer

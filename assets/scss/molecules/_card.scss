@@ -1,0 +1,60 @@
+.card {
+    border-radius: 0;
+    border: 0;
+
+    &-link {
+        color: inherit;
+        &:hover,
+        &:active,
+        &:focus {
+            color: inherit;
+            .card-body-overlap {
+                background-color: rgba($brand-white, 1);
+            }
+        }
+    }
+    &-body {
+        &-overlap {
+            position: absolute;
+            bottom: 0;
+            z-index: 2;
+            width: 100%;
+            transition: background-color 0.2s;
+            background-color: rgba($brand-white, 0.95);
+        }
+    }
+    &-img {
+        &-top {
+            position: relative;
+            background: white;
+            overflow: hidden;
+            border-radius: 0;
+            img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+
+                height: 100%;
+                width: 100%;
+                max-width: none;
+                object-fit: cover;
+            }
+            &::before {
+                content: '';
+                width: 1px;
+                margin-left: -1px;
+                float: left;
+                height: 0;
+                padding-top: 150%;
+            }
+            &::after {
+                /* to clear float */
+                content: '';
+                display: table;
+                clear: both;
+            }
+        }
+    }
+}

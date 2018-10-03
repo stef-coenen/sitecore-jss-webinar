@@ -19,23 +19,3 @@ body {
 .eh-grid {
     display: flex;
 }
-
-@include media-breakpoint-up('md') {
-    .container {
-        width: 768px;
-    }
-}
-
-@include media-breakpoint-up('lg') {
-    .container {
-        width: 1140px;
-        max-width: 100%;
-    }
-}
-
-@include media-breakpoint-up('xl') {
-    .container {
-        width: 960px;
-        max-width: 100%;
-    }
-}
