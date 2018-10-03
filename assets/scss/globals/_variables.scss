@@ -51,9 +51,6 @@ $cyan: #17a2b8;
 $electric: #00d3ff;
 // Main
 $background-color: $white;
-//$delegation-red: #ff1919;
-$delegation-red: #f72e48;
-$delegation-secondary: hotpink;
 
 $colors: (
     blue: $blue,
@@ -71,7 +68,7 @@ $colors: (
     gray-dark: $gray-800
 );
 $theme-colors: (
-    primary: $delegation-red,
+    primary: $blue,
     secondary: $white,
     success: $green,
     info: $cyan,
@@ -85,5 +82,3 @@ $navbar-dark-color: rgba($white, 0.85);
 $navbar-dark-hover-color: rgba($white, 1);
 
 $spacer: 4rem;
-// Forms
-$input-border-focus: $delegation-red;

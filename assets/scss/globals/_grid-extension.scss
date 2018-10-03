@@ -1,6 +1,13 @@
 body {
     position: relative;
     overflow-x: hidden;
+    height: 100%;
+}
+
+#app {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 .row {

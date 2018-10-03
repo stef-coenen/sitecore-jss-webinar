@@ -1,13 +1,48 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Text, RichText, Image } from "@sitecore-jss/sitecore-jss-react";
-import { Container, Row, Col, Button } from "reactstrap";
+import { Container, Row, Col, Button, Nav, NavItem, NavLink } from "reactstrap";
 
 const Footer = ({ fields, copyright }) => (
   <footer className="footer">
     <Container className="footer-container">
-      <img className="footer-image" src="//placehold.it/200x500/FF0000" />
-      <h1>Test</h1>
+      <Row>
+        <Col sm="2">
+          <div className="footer-image">
+            <img src="//placehold.it/400x400/ffffff" />
+          </div>
+        </Col>
+
+        <Col sm="5">
+          <Nav vertical>
+            <NavItem>
+              <NavLink href="/">Home</NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink href="/">Why we do</NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink href="/">What we do</NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink href="/">How we do it</NavLink>
+            </NavItem>
+          </Nav>
+        </Col>
+        <Col sm="5">
+          <Nav vertical>
+            <NavItem>
+              <NavLink href="/">About us</NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink href="/">Careers</NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink href="/">Legal</NavLink>
+            </NavItem>
+          </Nav>
+        </Col>
+      </Row>
     </Container>
   </footer>
 );
