@@ -11,7 +11,7 @@
     "routeDataDir": "./data/routes",
     "language": "en",
     "rootPlaceholders": [
-      "jss-uranus"
+      "jss-main"
     ]
   },
   "scripts": {

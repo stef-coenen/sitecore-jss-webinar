@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Text, Image, Link } from "@sitecore-jss/sitecore-jss-react";
-import { Col, Card, CardBody, Button } from "reactstrap";
+import { Image } from "@sitecore-jss/sitecore-jss-react";
+import { Col } from "reactstrap";
 
 export default class JssImage extends React.Component {
   constructor(props) {

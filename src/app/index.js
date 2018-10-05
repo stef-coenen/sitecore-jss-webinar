@@ -6,7 +6,7 @@ import { Placeholder } from "@sitecore-jss/sitecore-jss-react";
 // import "../../assets/css/default.css";
 import "../../assets/scss/jss-headless.scss";
 
-const App = ({ route }) => <Placeholder name="jss-uranus" rendering={route} />;
+const App = ({ route }) => <Placeholder name="jss-main" rendering={route} />;
 
 App.propTypes = {
   route: PropTypes.object

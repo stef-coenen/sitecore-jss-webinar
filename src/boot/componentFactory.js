@@ -1,5 +1,6 @@
 // Atoms
 import JssImage from "../app/components/atoms/Image";
+import FreeText from "../app/components/atoms/Freetext";
 
 // Molecules
 import Hero from "../app/components/molecules/Hero";
@@ -13,18 +14,19 @@ import Footer from "../app/components/organisms/Footer";
 
 const components = new Map();
 
-// Atoms
-components.set("JssImage", JssImage);
+// Organsism
+components.set("Welcome", Welcome);
+components.set("Navigation", Navigation);
+components.set("Footer", Footer);
 
 // Molecules
 components.set("Hero", Hero);
 components.set("Section", Section);
 components.set("JssCard", JssCard);
 
-// Organsism
-components.set("Welcome", Welcome);
-components.set("Navigation", Navigation);
-components.set("Footer", Footer);
+// Atoms
+components.set("JssImage", JssImage);
+components.set("FreeText", FreeText);
 
 const componentFactory = componentName => components.get(componentName);
 

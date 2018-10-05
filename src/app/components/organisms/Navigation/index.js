@@ -1,6 +1,4 @@
 import React from "react";
-import PropTypes from "prop-types";
-import { Text, RichText, Image } from "@sitecore-jss/sitecore-jss-react";
 import {
   Container,
   Navbar,
