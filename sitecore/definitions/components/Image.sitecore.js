@@ -6,12 +6,10 @@ import {
 
 export default manifest => {
   addComponent(manifest, {
-    name: "Section",
-    displayName: "Section",
+    name: "JssImage",
+    displayName: "JssImage",
     // totally optional, but fun
     icon: SitecoreIcon.EmoticonSmile,
-    fields: [{ name: "title", type: CommonFieldTypes.SingleLineText }],
-    placeholders: ["jss-section"],
-    params: ["classList"]
+    fields: [{ name: "image", type: CommonFieldTypes.Image }]
   });
 };

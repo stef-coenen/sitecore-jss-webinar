@@ -15,8 +15,11 @@ placeholders:
                       src: '/assets/img/hero-background.jpeg'
                       alt: Logo
         - componentName: Section
+          fields:
+              title:
+                  value: Our seasons
           params:
-              classList: 'mt-2 mb-2'
+              classList: 'pt-4 pb-4 section-grey'
           placeholders:
               jss-section:
                   - componentName: JssCard
@@ -80,4 +83,17 @@ placeholders:
                             value:
                                 href: 'http://www.sidewalk.be'
 
+        - componentName: Section
+          fields:
+              title:
+                  value: About us
+          params:
+              classList: 'pt-4 pb-4'
+          placeholders:
+              jss-section:
+                  - componentName: JssImage
+                    fields:
+                        image:
+                            value:
+                                src: '/assets/img/hero-background.jpeg'
         - componentName: Footer
