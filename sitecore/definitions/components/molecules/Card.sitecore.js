@@ -13,7 +13,6 @@ export default manifest => {
     fields: [
       { name: "title", type: CommonFieldTypes.SingleLineText },
       { name: "backgroundImage", type: CommonFieldTypes.Image },
-      { name: "title", type: CommonFieldTypes.SingleLineText },
       { name: "subtitle", type: CommonFieldTypes.SingleLineText },
       { name: "text", type: CommonFieldTypes.MultiLineText },
       { name: "link", type: CommonFieldTypes.GeneralLink }
