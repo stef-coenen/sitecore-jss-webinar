@@ -1,0 +1,118 @@
+# This is a route layout definition.
+# The route definition defines which Sitecore components are present on a route,
+# what their content data is, and which _placeholder_ they are placed in.
+
+# This particular route definition is for the home route - '/', so it defines the
+# components shown on the initial page of the app.
+
+# You may use equivalent JSON files instead of YAML if you prefer;
+# however YAML is simpler to read and allows comments like this one :)
+
+# Setting an ID is optional, but it will allow referring to this item in internal links
+# the ID can be a app-wide-unique string, or a GUID value.
+id: home-page
+
+# Route-level fields are appropriate for page level data like <title> contents
+# Define route level fields in /sitecore/definitions/routes.sitecore
+
+# Define the page layout starting at the root placeholder - in this case, 'jss-main'
+# root placeholder names are defined in the package.json config section (required for Sitecore deployment)
+name: home
+displayName: Home
+placeholders:
+    jss-main:
+        - componentName: Navigation
+        - componentName: Hero
+          fields:
+              title:
+                  value: Some title
+              backgroundImage:
+                  value:
+                      src: 'data/media/img/hero-background.jpeg'
+                      alt: Logo
+        - componentName: Section
+          fields:
+              title:
+                  value: Our seasons
+          params:
+              classList: 'pt-4 pb-4 section-grey'
+          placeholders:
+              jss-section:
+                  - componentName: JssCard
+                    fields:
+                        title:
+                            value: Spring
+                        subtitle:
+                            value: Season
+                        text:
+                            value: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consequat nisl non erat rhoncus, a aliquet urna lobortis.
+                        backgroundImage:
+                            value:
+                                src: 'data/media/img/card/spring.jpeg'
+                                alt: Logo
+                        link:
+                            value:
+                                href: 'http://www.sidewalk.be'
+                  - componentName: JssCard
+                    fields:
+                        title:
+                            value: Summer
+                        subtitle:
+                            value: Season
+                        text:
+                            value: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consequat nisl non erat rhoncus, a aliquet urna lobortis.
+                        backgroundImage:
+                            value:
+                                src: 'data/media/img/card/summer.jpeg'
+                                alt: Logo
+                        link:
+                            value:
+                                href: 'http://www.sidewalk.be'
+                  - componentName: JssCard
+                    fields:
+                        title:
+                            value: Autumn
+                        subtitle:
+                            value: Season
+                        text:
+                            value: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consequat nisl non erat rhoncus, a aliquet urna lobortis.
+                        backgroundImage:
+                            value:
+                                src: 'data/media/img/card/autumn.jpeg'
+                                alt: Logo
+                        link:
+                            value:
+                                href: 'http://www.sidewalk.be'
+                  - componentName: JssCard
+                    fields:
+                        title:
+                            value: Winter
+                        subtitle:
+                            value: Season
+                        text:
+                            value: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consequat nisl non erat rhoncus, a aliquet urna lobortis.
+                        backgroundImage:
+                            value:
+                                src: 'data/media/img/card/winter.jpeg'
+                                alt: Logo
+                        link:
+                            value:
+                                href: 'http://www.sidewalk.be'
+        - componentName: Section
+          fields:
+              title:
+                  value: About us
+          params:
+              classList: 'pt-4 pb-4'
+          placeholders:
+              jss-section:
+                  - componentName: JssImage
+                    fields:
+                        image:
+                            value:
+                                src: 'data/media/img/hero-background.jpeg'
+                  - componentName: FreeText
+                    fields:
+                        freeText:
+                            value: <h3>Satisfaction</h3><p>We strive for your satisfaction. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec massa aliquet, facilisis ipsum eu, fermentum turpis. Phasellus eget dapibus magna. Nulla dictum erat felis, vitae molestie justo iaculis ut. Fusce ullamcorper elit erat, mattis varius elit finibus a. Nulla ut dui risus.</p>
+        - componentName: Footer

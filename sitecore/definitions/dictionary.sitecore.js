@@ -1,22 +1,26 @@
-import { addDictionary } from '@sitecore-jss/sitecore-jss-manifest';
+// eslint-disable-next-line no-unused-vars
+import { Manifest } from '@sitecore-jss/sitecore-jss-manifest';
 import { mergeFs } from '@sitecore-jss/sitecore-jss-dev-tools';
 import fs from 'fs';
 
-// reads dictionary definition file(s) in /data/dictionary, and subfolders if any,
-// merges them together, and then emits them into the manifest as { key: 'key', value: 'value' }
-// in the manifest language
-
-export default (manifest) => {
+/**
+ * Reads dictionary definition file in /data/dictionary,
+ * then emits the dictionary into the disconnected manifest.
+ * Invoked by convention (*.sitecore.js) when `jss manifest` is run.
+ * @param {Manifest} manifest
+ * @returns {Promise}
+ */
+export default function addDictionaryToManifest(manifest) {
   const startPath = './data/dictionary'; // relative to process invocation (i.e. where package.json lives)
 
   if (!fs.existsSync(startPath)) return;
 
   // eslint-disable-next-line consistent-return
   return mergeFs(startPath)
-    .then((result) => mergeDictionaryFiles({ data: result, language: manifest.language }))
+    .then((result) => mergeDictionaryFiles(result, manifest.language))
     .then((mergedDictionary) => convertToManifestDictionary(mergedDictionary))
-    .then((dictionary) => addDictionary(manifest, dictionary));
-};
+    .then((dictionary) => manifest.addDictionary(dictionary));
+}
 
 function convertToManifestDictionary(mergedDictionary) {
   return Object.keys(mergedDictionary).map((key) => ({
@@ -27,22 +31,23 @@ function convertToManifestDictionary(mergedDictionary) {
   }));
 }
 
-function mergeDictionaryFiles({ data, language }) {
-  let result = {};
+/**
+ * Maps a filesystem dictionary file into an object that represents the dictionary.
+ * @param {MergeFsResult} data Filesystem data (files and folders under current path)
+ * @param {string} language Language the manifest is being created in. Conventionally affects the expected filename.
+ * @returns {object} Key-value mappings for the dictionary
+ */
+function mergeDictionaryFiles(data, language) {
+  let dictionaryResult = {};
 
-  const match = new RegExp(`^${language}\\.(yaml|yml|json)$`, 'i');
-  const file = data.files.find((f) => match.test(f.filename));
-  if (file && file.contents) {
-    result = file.contents;
+  // regex that matches the expected dictionary file name
+  const dictionaryFilePattern = new RegExp(`^${language}\\.(yaml|yml|json)$`, 'i');
+  const dictionaryFileData = data.files.find((f) => dictionaryFilePattern.test(f.filename));
+
+  if (dictionaryFileData && dictionaryFileData.contents) {
+    // customize here to modify the dictionary or apply conventions
+    dictionaryResult = dictionaryFileData.contents;
   }
 
-  if (data.folders.length > 0) {
-    const childResults = data.folders
-      .map((folder) => mergeDictionaryFiles({ data: folder, language }))
-      .filter((item) => item); // remove null results
-
-    result = Object.assign({}, result, ...childResults);
-  }
-
-  return result;
+  return dictionaryResult;
 }
