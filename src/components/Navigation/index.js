@@ -1,4 +1,5 @@
 import React from 'react';
+import { Image } from '@sitecore-jss/sitecore-jss-react';
 import {
     Container,
     Navbar,
@@ -34,7 +35,7 @@ export default class Navigation extends React.Component {
                 <Container>
                     <Navbar color="faded" light expand="md">
                         <NavbarBrand href="/" className="mr-auto">
-                            <img src="data/media/img/proxelo-logo-long.svg" alt="Proxelo logo" />
+                            <Image media={this.props.fields.logo} />
                         </NavbarBrand>
                         <NavbarToggler onClick={this.toggleNavbar} className="mr-2" />
                         <Collapse isOpen={!this.state.collapsed} navbar>
