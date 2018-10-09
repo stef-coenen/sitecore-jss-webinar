@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text } from '@sitecore-jss/sitecore-jss-react';
+import { RichText } from '@sitecore-jss/sitecore-jss-react';
 import { Col } from 'reactstrap';
 
 export default class FreeText extends React.Component {
@@ -9,7 +9,7 @@ export default class FreeText extends React.Component {
     render() {
         return (
             <Col>
-                <Text field={this.props.fields.freeText} />
+                <RichText field={this.props.fields.freeText} className="rich-text" />
             </Col>
         );
     }
