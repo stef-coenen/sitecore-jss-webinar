@@ -115,4 +115,18 @@ placeholders:
                     fields:
                         freeText:
                             value: <h3>Satisfaction</h3><p>We strive for your satisfaction. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec massa aliquet, facilisis ipsum eu, fermentum turpis. Phasellus eget dapibus magna. Nulla dictum erat felis, vitae molestie justo iaculis ut. Fusce ullamcorper elit erat, mattis varius elit finibus a. Nulla ut dui risus.</p>
+        - componentName: Section
+          fields:
+              title:
+                  value: Join us
+          params:
+              classList: 'pt-4 pb-4'
+          placeholders:
+              jss-section:
+                  - componentName: JssImage
+                    fields:
+                        image:
+                            value:
+                                src: 'data/media/img/hero-background.jpeg'
+                  - componentName: JoinUsForm
         - componentName: Footer
