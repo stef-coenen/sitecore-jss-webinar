@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Text, Image } from '@sitecore-jss/sitecore-jss-react';
+import { Text, Image, Link } from '@sitecore-jss/sitecore-jss-react';
 import { Col, Card, CardBody } from 'reactstrap';
 
 export default class JssCard extends React.Component {
@@ -11,7 +11,7 @@ export default class JssCard extends React.Component {
         return (
             <Col>
                 <Card>
-                    <a className="card-link" href={this.props.fields.link.value.href}>
+                    <Link field={this.props.fields.link} className="card-link">
                         <div className="card-img-top">
                             <Image media={this.props.fields.backgroundImage} />
                         </div>
@@ -25,7 +25,7 @@ export default class JssCard extends React.Component {
                             />
                             <Text tag="p" className="card-text" field={this.props.fields.text} />
                         </CardBody>
-                    </a>
+                    </Link>
                 </Card>
             </Col>
         );
