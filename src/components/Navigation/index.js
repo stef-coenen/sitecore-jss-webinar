@@ -34,7 +34,7 @@ export default class Navigation extends React.Component {
                 <Container>
                     <Navbar color="faded" light expand="md">
                         <NavbarBrand href="/" className="mr-auto">
-                            <img src="data/media/img/proxelo-logo-long.svg" />
+                            <img src="data/media/img/proxelo-logo-long.svg" alt="Proxelo logo" />
                         </NavbarBrand>
                         <NavbarToggler onClick={this.toggleNavbar} className="mr-2" />
                         <Collapse isOpen={!this.state.collapsed} navbar>

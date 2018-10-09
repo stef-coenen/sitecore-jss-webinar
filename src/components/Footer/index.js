@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Text, RichText, Image } from '@sitecore-jss/sitecore-jss-react';
-import { Container, Row, Col, Button, Nav, NavItem, NavLink } from 'reactstrap';
+import { Container, Row, Col, Nav, NavItem, NavLink } from 'reactstrap';
 
 const Footer = ({ fields, copyright }) => (
     <footer className="footer">
@@ -9,7 +8,7 @@ const Footer = ({ fields, copyright }) => (
             <Row>
                 <Col sm="2">
                     <div className="footer-image">
-                        <img src="data/media/img/proxelo-logo-white.svg" />
+                        <img src="data/media/img/proxelo-logo-white.svg" alt="Proxelo logo" />
                     </div>
                 </Col>
 
