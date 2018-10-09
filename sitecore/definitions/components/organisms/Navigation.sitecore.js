@@ -5,7 +5,7 @@ export default manifest => {
         name: 'Navigation',
         displayName: 'Navigation',
         // totally optional, but fun
-        icon: SitecoreIcon.EmoticonSmile,
+        icon: SitecoreIcon.Tree,
         fields: [{ name: 'logo', type: CommonFieldTypes.Image }]
     });
 };

@@ -5,6 +5,6 @@ export default manifest => {
         name: 'JoinUsForm',
         displayName: 'JoinUsForm',
         // totally optional, but fun
-        icon: SitecoreIcon.EmoticonSmile
+        icon: SitecoreIcon.Bus
     });
 };

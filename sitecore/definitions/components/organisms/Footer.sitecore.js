@@ -5,7 +5,7 @@ export default manifest => {
         name: 'Footer',
         displayName: 'Footer',
         // totally optional, but fun
-        icon: SitecoreIcon.EmoticonSmile,
+        icon: SitecoreIcon.DocumentFooter,
         fields: [{ name: 'logo', type: CommonFieldTypes.Image }]
     });
 };

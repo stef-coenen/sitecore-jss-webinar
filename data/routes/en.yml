@@ -12,6 +12,9 @@
 # the ID can be a app-wide-unique string, or a GUID value.
 id: home-page
 
+fields:
+    pageTitle: Home page
+
 # Route-level fields are appropriate for page level data like <title> contents
 # Define route level fields in /sitecore/definitions/routes.sitecore
 
