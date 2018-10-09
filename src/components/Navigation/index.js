@@ -8,11 +8,11 @@ import {
     Collapse,
     Nav,
     NavItem,
-    NavLink,
-    UncontrolledDropdown,
-    DropdownToggle,
-    DropdownMenu,
-    DropdownItem
+    NavLink
+    // UncontrolledDropdown,
+    // DropdownToggle,
+    // DropdownMenu,
+    // DropdownItem
 } from 'reactstrap';
 
 export default class Navigation extends React.Component {
@@ -41,14 +41,14 @@ export default class Navigation extends React.Component {
                         <Collapse isOpen={!this.state.collapsed} navbar>
                             <Nav navbar className="ml-auto">
                                 <NavItem>
-                                    <NavLink href="/components/">Components</NavLink>
+                                    <NavLink href="/styleguide/">Components</NavLink>
                                 </NavItem>
                                 <NavItem>
-                                    <NavLink href="https://github.com/reactstrap/reactstrap">
+                                    <NavLink href="https://github.com/Sitecore/jss" target="_blank">
                                         GitHub
                                     </NavLink>
                                 </NavItem>
-                                <UncontrolledDropdown nav inNavbar>
+                                {/* <UncontrolledDropdown nav inNavbar>
                                     <DropdownToggle nav caret>
                                         Options
                                     </DropdownToggle>
@@ -58,7 +58,7 @@ export default class Navigation extends React.Component {
                                         <DropdownItem divider />
                                         <DropdownItem>Reset</DropdownItem>
                                     </DropdownMenu>
-                                </UncontrolledDropdown>
+                                </UncontrolledDropdown> */}
                             </Nav>
                         </Collapse>
                     </Navbar>
