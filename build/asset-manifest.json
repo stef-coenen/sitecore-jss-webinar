@@ -1,10 +1,10 @@
 {
   "runtime~main.js": "/dist/webinar/static/js/runtime~main.4f86f141.js",
   "runtime~main.js.map": "/dist/webinar/static/js/runtime~main.4f86f141.js.map",
-  "vendors.js": "/dist/webinar/static/js/vendors.201634fe.chunk.js",
-  "vendors.js.map": "/dist/webinar/static/js/vendors.201634fe.chunk.js.map",
+  "vendors.js": "/dist/webinar/static/js/vendors.b489f16b.chunk.js",
+  "vendors.js.map": "/dist/webinar/static/js/vendors.b489f16b.chunk.js.map",
   "main.css": "/dist/webinar/static/css/main.78cb2324.chunk.css",
-  "main.js": "/dist/webinar/static/js/main.c1c9a1db.chunk.js",
-  "main.js.map": "/dist/webinar/static/js/main.c1c9a1db.chunk.js.map",
+  "main.js": "/dist/webinar/static/js/main.c32b40f4.chunk.js",
+  "main.js.map": "/dist/webinar/static/js/main.c32b40f4.chunk.js.map",
   "index.html": "/dist/webinar/index.html"
 }
