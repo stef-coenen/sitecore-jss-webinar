@@ -27223,7 +27223,7 @@ var ApolloClient_ApolloClient = /** @class */ (function () {
 /* 93 */
 /***/ (function(module, exports) {
 
-module.exports = "<!DOCTYPE html><html lang=\"en\"><head><meta charset=\"utf-8\"><meta name=\"viewport\" content=\"width=device-width,initial-scale=1,shrink-to-fit=no\"><meta name=\"theme-color\" content=\"#000000\"><link rel=\"shortcut icon\" href=\"/dist/webinar/favicon.ico\"><link href=\"/dist/webinar/static/css/main.78cb2324.chunk.css\" rel=\"stylesheet\"></head><body><noscript>You need to enable JavaScript to run this app.</noscript><div id=\"root\"></div><script>window.__JSS_STATE__=null</script><script type=\"text/javascript\" src=\"/dist/webinar/static/js/runtime~main.4f86f141.js\"></script><script type=\"text/javascript\" src=\"/dist/webinar/static/js/vendors.2df2160b.chunk.js\"></script><script type=\"text/javascript\" src=\"/dist/webinar/static/js/main.c3eeb087.chunk.js\"></script></body></html>";
+module.exports = "<!DOCTYPE html><html lang=\"en\"><head><meta charset=\"utf-8\"><meta name=\"viewport\" content=\"width=device-width,initial-scale=1,shrink-to-fit=no\"><meta name=\"theme-color\" content=\"#000000\"><link rel=\"shortcut icon\" href=\"/dist/webinar/favicon.ico\"><link href=\"/dist/webinar/static/css/main.064508d8.chunk.css\" rel=\"stylesheet\"></head><body><noscript>You need to enable JavaScript to run this app.</noscript><div id=\"root\"></div><script>window.__JSS_STATE__=null</script><script type=\"text/javascript\" src=\"/dist/webinar/static/js/runtime~main.4f86f141.js\"></script><script type=\"text/javascript\" src=\"/dist/webinar/static/js/vendors.ad986dd0.chunk.js\"></script><script type=\"text/javascript\" src=\"/dist/webinar/static/js/main.7b14fd72.chunk.js\"></script></body></html>";
 
 /***/ }),
 /* 94 */
@@ -28899,7 +28899,7 @@ var Navigation = function (_React$Component) {
                                     null,
                                     _react2.default.createElement(
                                         _reactstrap.NavLink,
-                                        { href: '/components/' },
+                                        { href: '/styleguide/' },
                                         'Components'
                                     )
                                 ),
@@ -28908,37 +28908,8 @@ var Navigation = function (_React$Component) {
                                     null,
                                     _react2.default.createElement(
                                         _reactstrap.NavLink,
-                                        { href: 'https://github.com/reactstrap/reactstrap' },
+                                        { href: 'https://github.com/Sitecore/jss', target: '_blank' },
                                         'GitHub'
-                                    )
-                                ),
-                                _react2.default.createElement(
-                                    _reactstrap.UncontrolledDropdown,
-                                    { nav: true, inNavbar: true },
-                                    _react2.default.createElement(
-                                        _reactstrap.DropdownToggle,
-                                        { nav: true, caret: true },
-                                        'Options'
-                                    ),
-                                    _react2.default.createElement(
-                                        _reactstrap.DropdownMenu,
-                                        { right: true },
-                                        _react2.default.createElement(
-                                            _reactstrap.DropdownItem,
-                                            null,
-                                            'Option 1'
-                                        ),
-                                        _react2.default.createElement(
-                                            _reactstrap.DropdownItem,
-                                            null,
-                                            'Option 2'
-                                        ),
-                                        _react2.default.createElement(_reactstrap.DropdownItem, { divider: true }),
-                                        _react2.default.createElement(
-                                            _reactstrap.DropdownItem,
-                                            null,
-                                            'Reset'
-                                        )
                                     )
                                 )
                             )

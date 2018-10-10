@@ -12,6 +12,9 @@
                 background-color: rgba($brand-white, 1);
             }
         }
+        @at-root span.card-link + .card-link {
+            margin-left: 0;
+        }
     }
     &-body {
         &-overlap {
