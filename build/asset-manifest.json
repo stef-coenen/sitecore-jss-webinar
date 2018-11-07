@@ -1,10 +1,10 @@
 {
-  "runtime~main.js": "/dist/webinar/static/js/runtime~main.4f86f141.js",
-  "runtime~main.js.map": "/dist/webinar/static/js/runtime~main.4f86f141.js.map",
-  "vendors.js": "/dist/webinar/static/js/vendors.ad986dd0.chunk.js",
-  "vendors.js.map": "/dist/webinar/static/js/vendors.ad986dd0.chunk.js.map",
-  "main.css": "/dist/webinar/static/css/main.064508d8.chunk.css",
-  "main.js": "/dist/webinar/static/js/main.7b14fd72.chunk.js",
-  "main.js.map": "/dist/webinar/static/js/main.7b14fd72.chunk.js.map",
-  "index.html": "/dist/webinar/index.html"
+  "runtime~main.js": "/dist/SidewalkJss/static/js/runtime~main.9f9bc305.js",
+  "runtime~main.js.map": "/dist/SidewalkJss/static/js/runtime~main.9f9bc305.js.map",
+  "vendors.js": "/dist/SidewalkJss/static/js/vendors.ad986dd0.chunk.js",
+  "vendors.js.map": "/dist/SidewalkJss/static/js/vendors.ad986dd0.chunk.js.map",
+  "main.css": "/dist/SidewalkJss/static/css/main.f34aa9a3.chunk.css",
+  "main.js": "/dist/SidewalkJss/static/js/main.e8cd7ce0.chunk.js",
+  "main.js.map": "/dist/SidewalkJss/static/js/main.e8cd7ce0.chunk.js.map",
+  "index.html": "/dist/SidewalkJss/index.html"
 }

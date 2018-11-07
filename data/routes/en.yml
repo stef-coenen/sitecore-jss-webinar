@@ -28,35 +28,35 @@ placeholders:
           fields:
               logo:
                   value:
-                      src: 'data/media/img/proxelo-logo-long.svg'
+                      src: 'data/media/img/win/sidewalk-logo.jpg'
                       alt: Logo
         - componentName: Hero
           fields:
               title:
-                  value: Some title
+                  value: Win a JSS implementation
               backgroundImage:
                   value:
-                      src: 'data/media/img/hero-background.jpeg'
+                      src: 'data/media/img/win/celebrate.jpeg'
                       alt: Logo
         - componentName: Section
           fields:
               title:
-                  value: Our seasons
+                  value: Our promise
           params:
-              classList: 'pt-4 pb-4 section-grey'
+              classList: 'pt-4 pb-4 section-grey narrow-grid'
           placeholders:
               jss-section:
                   - componentName: JssCard
                     fields:
                         title:
-                            value: Spring
+                            value: Co-creation workshop
                         subtitle:
-                            value: Season
+                            value: Step 1
                         text:
-                            value: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consequat nisl non erat rhoncus, a aliquet urna lobortis.
+                            ? value
                         backgroundImage:
                             value:
-                                src: 'data/media/img/card/spring.jpeg'
+                                src: 'data/media/img/win/workshop.jpeg'
                                 alt: Logo
                         link:
                             value:
@@ -64,14 +64,14 @@ placeholders:
                   - componentName: JssCard
                     fields:
                         title:
-                            value: Summer
+                            value: Implementation
                         subtitle:
-                            value: Season
+                            value: Step 2
                         text:
-                            value: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consequat nisl non erat rhoncus, a aliquet urna lobortis.
+                            ? value
                         backgroundImage:
                             value:
-                                src: 'data/media/img/card/summer.jpeg'
+                                src: 'data/media/img/win/implementation.jpeg'
                                 alt: Logo
                         link:
                             value:
@@ -79,14 +79,14 @@ placeholders:
                   - componentName: JssCard
                     fields:
                         title:
-                            value: Autumn
+                            value: Launch
                         subtitle:
-                            value: Season
+                            value: Step 3
                         text:
-                            value: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consequat nisl non erat rhoncus, a aliquet urna lobortis.
+                            ? value
                         backgroundImage:
                             value:
-                                src: 'data/media/img/card/autumn.jpeg'
+                                src: 'data/media/img/win/release.jpeg'
                                 alt: Logo
                         link:
                             value:
@@ -94,14 +94,14 @@ placeholders:
                   - componentName: JssCard
                     fields:
                         title:
-                            value: Winter
+                            value: Convert
                         subtitle:
-                            value: Season
+                            value: Step 4
                         text:
-                            value: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consequat nisl non erat rhoncus, a aliquet urna lobortis.
+                            ? value
                         backgroundImage:
                             value:
-                                src: 'data/media/img/card/winter.jpeg'
+                                src: 'data/media/img/win/converse.jpeg'
                                 alt: Logo
                         link:
                             value:
@@ -109,7 +109,7 @@ placeholders:
         - componentName: Section
           fields:
               title:
-                  value: About us
+                  value: Sidewalk
           params:
               classList: 'pt-4 pb-4'
           placeholders:
@@ -118,28 +118,25 @@ placeholders:
                     fields:
                         image:
                             value:
-                                src: 'data/media/img/hero-background.jpeg'
+                                src: 'data/media/img/win/sidewalk.png'
                   - componentName: FreeText
                     fields:
                         freeText:
-                            value: <h3>Satisfaction</h3><p>We strive for your satisfaction. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec massa aliquet, facilisis ipsum eu, fermentum turpis. Phasellus eget dapibus magna. Nulla dictum erat felis, vitae molestie justo iaculis ut. Fusce ullamcorper elit erat, mattis varius elit finibus a. Nulla ut dui risus.</p>
+                            value: <p>At Sidewalk, we believe in using marketing technology to enable organizations achieving their objectives. We do this by building long term relationships with our clients, understanding their strategy and continuously translating this strategy into suitable solutions. We create, continuously challenge and improve strategic digital marketing platforms based on the Sitecore Experience Platform.</p>
+
         - componentName: Section
           fields:
               title:
-                  value: Join us
+                  value: Enter the competition
           params:
-              classList: 'pt-4 pb-4'
+              classList: 'pt-4 pb-4 section-center-title section-lightgreen'
           placeholders:
               jss-section:
-                  - componentName: JssImage
-                    fields:
-                        image:
-                            value:
-                                src: 'data/media/img/hero-background.jpeg'
                   - componentName: JoinUsForm
+
         - componentName: Footer
           fields:
               logo:
                   value:
-                      src: 'data/media/img/proxelo-logo-white.svg'
+                      src: 'data/media/img/win/sidewalk-logo.jpg'
                       alt: Logo

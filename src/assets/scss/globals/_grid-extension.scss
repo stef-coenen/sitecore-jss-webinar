@@ -16,6 +16,17 @@ body {
     }
 }
 
+.narrow-grid {
+    .row {
+        margin-left: -6px;
+        margin-right: -6px;
+        [class*='col'] {
+            padding-left: 6px;
+            padding-right: 6px;
+        }
+    }
+}
+
 .eh-grid {
     display: flex;
 }

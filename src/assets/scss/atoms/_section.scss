@@ -5,4 +5,12 @@
     &-dark {
         color: $brand-white;
     }
+    &-lightgreen {
+        background-color: #d2e8c3;
+    }
+    &-center-title {
+        .section-title {
+            text-align: center;
+        }
+    }
 }

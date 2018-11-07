@@ -10,7 +10,9 @@ export default class JssImage extends React.Component {
     render() {
         return (
             <Col>
-                <Image media={this.props.fields.image} />
+                <div className="text-center">
+                    <Image media={this.props.fields.image} />
+                </div>
             </Col>
         );
     }

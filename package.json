@@ -1,16 +1,16 @@
 {
-  "name": "webinar",
+  "name": "SidewalkJss",
   "description": "Application utilizing Sitecore JavaScript Services and React (create-react-app).",
   "version": "9.0.6",
   "private": true,
   "config": {
-    "appName": "webinar",
+    "appName": "SidewalkJss",
     "rootPlaceholders": [
       "jss-main"
     ],
-    "sitecoreDistPath": "/dist/webinar",
+    "sitecoreDistPath": "/dist/SidewalkJss",
     "sitecoreConfigPath": "/App_Config/Include/zzz",
-    "graphQLEndpointPath": "/api/webinar",
+    "graphQLEndpointPath": "/api/SidewalkJss",
     "language": "en"
   },
   "author": {
