@@ -3,28 +3,32 @@ import PropTypes from 'prop-types';
 import { Text, Image } from '@sitecore-jss/sitecore-jss-react';
 import { Container } from 'reactstrap';
 
-const Hero = ({ fields, copyright }) => (
-    <header className="hero dark-bg">
-        <Image className="hero-image" media={fields.backgroundImage} />
-        <Container className="hero-container">
-            <Text tag="h1" className="hero-title" field={fields.title} />
-        </Container>
-    </header>
-);
+export default class Hero extends React.Component {
+    constructor(props) {
+        super(props);
 
-Hero.propTypes = {
-    fields: PropTypes.shape({
-        title: PropTypes.shape({
-            value: PropTypes.string,
-            editable: PropTypes.string
-        }),
-        backgroundImage: PropTypes.shape({
-            value: PropTypes.shape({
-                src: PropTypes.string
-            }),
-            editable: PropTypes.string
-        })
-    })
-};
+        this.state = {
+            loaded: false
+        };
 
-export default Hero;
+        setTimeout(() => {
+            console.log('timeout');
+            this.setState({ loaded: true });
+        }, 1000);
+    }
+
+    isActive = function(value) {
+        return 'hero dark-bg' + (this.state.loaded ? ' loaded' : '');
+    };
+
+    render() {
+        return (
+            <header className={this.isActive()}>
+                <Image className="hero-image" media={this.props.fields.backgroundImage} />
+                <Container className="hero-container">
+                    <Text tag="h1" className="hero-title" field={this.props.fields.title} />
+                </Container>
+            </header>
+        );
+    }
+}

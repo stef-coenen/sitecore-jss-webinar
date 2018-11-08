@@ -27223,7 +27223,7 @@ var ApolloClient_ApolloClient = /** @class */ (function () {
 /* 93 */
 /***/ (function(module, exports) {
 
-module.exports = "<!DOCTYPE html><html lang=\"en\"><head><meta charset=\"utf-8\"><meta name=\"viewport\" content=\"width=device-width,initial-scale=1,shrink-to-fit=no\"><meta name=\"theme-color\" content=\"#000000\"><link rel=\"shortcut icon\" href=\"/dist/SidewalkJss/favicon.ico\"><link href=\"/dist/SidewalkJss/static/css/main.f34aa9a3.chunk.css\" rel=\"stylesheet\"></head><body><noscript>You need to enable JavaScript to run this app.</noscript><div id=\"root\"></div><script>window.__JSS_STATE__=null</script><script type=\"text/javascript\" src=\"/dist/SidewalkJss/static/js/runtime~main.9f9bc305.js\"></script><script type=\"text/javascript\" src=\"/dist/SidewalkJss/static/js/vendors.ad986dd0.chunk.js\"></script><script type=\"text/javascript\" src=\"/dist/SidewalkJss/static/js/main.e8cd7ce0.chunk.js\"></script></body></html>";
+module.exports = "<!DOCTYPE html><html lang=\"en\"><head><meta charset=\"utf-8\"><meta name=\"viewport\" content=\"width=device-width,initial-scale=1,shrink-to-fit=no\"><meta name=\"theme-color\" content=\"#000000\"><link rel=\"shortcut icon\" href=\"/dist/SidewalkJss/favicon.ico\"><link href=\"/dist/SidewalkJss/static/css/main.dab176ef.chunk.css\" rel=\"stylesheet\"></head><body><noscript>You need to enable JavaScript to run this app.</noscript><div id=\"root\"></div><script>window.__JSS_STATE__=null</script><script type=\"text/javascript\" src=\"/dist/SidewalkJss/static/js/runtime~main.9f9bc305.js\"></script><script type=\"text/javascript\" src=\"/dist/SidewalkJss/static/js/vendors.ad986dd0.chunk.js\"></script><script type=\"text/javascript\" src=\"/dist/SidewalkJss/static/js/main.62e2b21e.chunk.js\"></script></body></html>";
 
 /***/ }),
 /* 94 */
@@ -29288,6 +29288,8 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
 var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
@@ -29302,35 +29304,53 @@ var _reactstrap = __webpack_require__(15);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var Hero = function Hero(_ref) {
-    var fields = _ref.fields,
-        copyright = _ref.copyright;
-    return _react2.default.createElement(
-        'header',
-        { className: 'hero dark-bg' },
-        _react2.default.createElement(_sitecoreJssReact.Image, { className: 'hero-image', media: fields.backgroundImage }),
-        _react2.default.createElement(
-            _reactstrap.Container,
-            { className: 'hero-container' },
-            _react2.default.createElement(_sitecoreJssReact.Text, { tag: 'h1', className: 'hero-title', field: fields.title })
-        )
-    );
-};
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-Hero.propTypes = {
-    fields: _propTypes2.default.shape({
-        title: _propTypes2.default.shape({
-            value: _propTypes2.default.string,
-            editable: _propTypes2.default.string
-        }),
-        backgroundImage: _propTypes2.default.shape({
-            value: _propTypes2.default.shape({
-                src: _propTypes2.default.string
-            }),
-            editable: _propTypes2.default.string
-        })
-    })
-};
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Hero = function (_React$Component) {
+    _inherits(Hero, _React$Component);
+
+    function Hero(props) {
+        _classCallCheck(this, Hero);
+
+        var _this = _possibleConstructorReturn(this, (Hero.__proto__ || Object.getPrototypeOf(Hero)).call(this, props));
+
+        _this.isActive = function (value) {
+            return 'hero dark-bg' + (this.state.loaded ? ' loaded' : '');
+        };
+
+        _this.state = {
+            loaded: false
+        };
+
+        setTimeout(function () {
+            console.log('timeout');
+            _this.setState({ loaded: true });
+        }, 1000);
+        return _this;
+    }
+
+    _createClass(Hero, [{
+        key: 'render',
+        value: function render() {
+            return _react2.default.createElement(
+                'header',
+                { className: this.isActive() },
+                _react2.default.createElement(_sitecoreJssReact.Image, { className: 'hero-image', media: this.props.fields.backgroundImage }),
+                _react2.default.createElement(
+                    _reactstrap.Container,
+                    { className: 'hero-container' },
+                    _react2.default.createElement(_sitecoreJssReact.Text, { tag: 'h1', className: 'hero-title', field: this.props.fields.title })
+                )
+            );
+        }
+    }]);
+
+    return Hero;
+}(_react2.default.Component);
 
 exports.default = Hero;
 

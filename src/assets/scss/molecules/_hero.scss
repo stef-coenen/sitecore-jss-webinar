@@ -1,5 +1,10 @@
 .hero {
     position: relative;
+    background-color: $gray-200;
+    margin-bottom: 0;
+    transition: margin-bottom 0.5s;
+    //transition-delay: 0.5s;
+
     &-image {
         position: absolute;
         top: 0;
@@ -9,6 +14,9 @@
         height: 100%;
         width: 100%;
         object-fit: cover;
+
+        clip-path: polygon(0% 0%, 0% 100%, 15% 100%, 85% 100%, 100% 100%, 100% 0%);
+        transition: clip-path 0.4s;
     }
     &-container {
         position: relative;
@@ -19,6 +27,13 @@
     &-title {
         margin: auto;
         font-size: 4rem;
+    }
+
+    &.loaded {
+        margin-bottom: -5rem;
+        .hero-image {
+            clip-path: polygon(0% 0%, 0% 100%, 15% 90%, 85% 90%, 100% 100%, 100% 0%);
+        }
     }
 }
 
